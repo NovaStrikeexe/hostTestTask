@@ -1,10 +1,5 @@
 package ru.host.hostTestTask.exceptions;
 
-import org.springframework.boot.autoconfigure.cassandra.CassandraProperties;
-
-public class EventException {
+public class EventException extends RuntimeException {
     private String eventResult;
-    public static CassandraProperties.Request eResult(){
-        return null;/*Заглушка*/
-    }
 }

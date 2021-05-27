@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 @AllArgsConstructor
-public class Data {
+public class DataDto {
     @Setter @Getter private int userId;
     @Setter @Getter private String cardNumber;
     @Setter @Getter private String lastName;

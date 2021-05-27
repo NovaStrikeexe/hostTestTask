@@ -9,7 +9,7 @@ import ru.host.hostTestTask.dto.PatientDto;
 import java.time.LocalDate;
 
 @RestController
-public class UserController {
+public class UserRestController {
     @GetMapping("/user")
 
     public String getUserInfo(){

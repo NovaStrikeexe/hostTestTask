@@ -8,7 +8,7 @@ import java.lang.String;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserInfo {
+public class UserInfoDto {
     @Setter @Getter private String lastName;//имя пользователя
     @Setter @Getter private String firstname;// фамилия
     @Setter @Getter private String middleName;// отчество

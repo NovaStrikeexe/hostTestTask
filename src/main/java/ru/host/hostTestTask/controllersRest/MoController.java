@@ -1,4 +1,4 @@
-package ru.host.hostTestTask.controllers;
+package ru.host.hostTestTask.controllersRest;
 
 public class MoController {
 }

@@ -1,0 +1,2 @@
+INSERT INTO archivist.ref_mo ("id","userId","cardNumber","lastName","firstName","middleName","snils","enp","birthDate","remdResult","codeMo","date_insert","date_update") VALUES
+(1,1,,,,,,,,"Success",,,)

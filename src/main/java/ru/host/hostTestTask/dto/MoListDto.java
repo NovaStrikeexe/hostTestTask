@@ -6,6 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 @AllArgsConstructor
-public class MoList {
-    @Setter @Getter private List<Mo> listMo = new ArrayList<>();
+public class MoListDto {
+    @Setter @Getter private List<MoDto> listMoDto = new ArrayList<>();
 }

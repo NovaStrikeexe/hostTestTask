@@ -8,7 +8,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
-public class Patient {
+public class PatientDto {
     @Setter @Getter private String lastName;
     @Setter @Getter private String firstName;
     @Setter @Getter private String middleName;
