@@ -12,7 +12,7 @@ public class UserInfoDto {
     @Setter @Getter private String lastName;//имя пользователя
     @Setter @Getter private String firstname;// фамилия
     @Setter @Getter private String middleName;// отчество
-    @Setter @Getter private int userId;// Айдшник
+    @Setter @Getter private Integer userId;// Айдшник
 
 
 }
