@@ -1,18 +1,13 @@
 package ru.host.hostTestTask.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import java.lang.String;
+import lombok.Data;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 public class UserInfoDto {
-    @Setter @Getter private String lastName;//имя пользователя
-    @Setter @Getter private String firstname;// фамилия
-    @Setter @Getter private String middleName;// отчество
-    @Setter @Getter private Integer userId;// Айдшник
+    private String lastName;//имя пользователя
+    private String firstname;// фамилия
+    private String middleName;// отчество
+    private Integer userId;// Айдшник
 
 
 }

@@ -1,18 +1,15 @@
 package ru.host.hostTestTask.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import java.time.LocalDate;
-@AllArgsConstructor
-@NoArgsConstructor
+
+@Data
 public class PatientDto {
-    @Setter @Getter private String lastName;
-    @Setter @Getter private String firstName;
-    @Setter @Getter private String middleName;
-    @Setter @Getter private String snils;
-    @Setter @Getter private String enp;
-    @Setter @Getter private LocalDate birthDate;
+    private String lastName;
+    private String firstName;
+    private String middleName;
+    private String snils;
+    private String enp;
+    private LocalDate birthDate;
 }

@@ -1,23 +1,18 @@
 package ru.host.hostTestTask.controllersRest;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-import ru.host.hostTestTask.dto.PatientDto;
-
-import java.time.LocalDate;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import ru.host.hostTestTask.dto.UserInfoDto;
 
 @RestController
+@RequestMapping("/user")
 public class UserRestController {
-    @GetMapping("/user")
+    @GetMapping()
+    public ResponseEntity<UserInfoDto> userInfoDtoResponseEntity(@RequestParam(value = "snils") String snils) {
 
-    public String getUserInfo(){
-        final String lname,fname,mName,snils,enp;
-        final LocalDate bDate;
-        PatientDto patientDto = new PatientDto();
-        return "user";
+        // HttpStatus userStatus = null;
+
+
     }
-
 }
 

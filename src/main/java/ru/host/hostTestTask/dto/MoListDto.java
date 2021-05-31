@@ -1,11 +1,11 @@
 package ru.host.hostTestTask.dto;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-@AllArgsConstructor
+
+@Data
 public class MoListDto {
-    @Setter @Getter private List<MoDto> listMoDto = new ArrayList<>();
+    private List<MoDto> listMoDto = new ArrayList<>();
 }

@@ -1,19 +1,19 @@
 package ru.host.hostTestTask.dto;
 
+import lombok.Data;
+
 import java.time.LocalDate;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-@AllArgsConstructor
+
+@Data
 public class DataDto {
-    @Setter @Getter private int userId;
-    @Setter @Getter private String cardNumber;
-    @Setter @Getter private String lastName;
-    @Setter @Getter private String firstName;
-    @Setter @Getter private String middleName;
-    @Setter @Getter private String snils;
-    @Setter @Getter private String enp;
-    @Setter @Getter private LocalDate birthDate;
-    @Setter @Getter private String remdResult;
-    @Setter @Getter  private String codeMo;
+    private int userId;
+    private String cardNumber;
+    private String lastName;
+    private String firstName;
+    private String middleName;
+    private String snils;
+    private String enp;
+    private LocalDate birthDate;
+    private String remdResult;
+    private String codeMo;
 }
