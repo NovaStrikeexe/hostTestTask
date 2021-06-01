@@ -2,7 +2,7 @@ CREATE SCHEMA IF NOT EXISTS archivist;
 
 GRANT USAGE ON SCHEMA archivist to archi;
 
-CREATE TABLE archivist.dt_table(
+CREATE TABLE archivist.dateSave(
     "id" integer PRIMARY KEY,
     "userId" integer NOT NULL,
     "cardNumber" varchar(20) NULL,
