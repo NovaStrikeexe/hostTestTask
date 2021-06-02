@@ -91,22 +91,32 @@
 			<plugin>
 				<groupId>org.jvnet.jaxb2.maven2</groupId>
 				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.13.2</version>
+				<version>0.14.0</version>
 				<executions>
 					<execution>
+						<id>reguser-service</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<schemaIncludes>
+								<include>src/main/resources/xsd/types.xsd</include>
+							</schemaIncludes>
+							<schemas>
+								<schema>
+									<url>src/main/resources/xsd/RegUserService.wsdl</url>
+								</schema>
+							</schemas>
+
+                            <bindingDirectory>src/main/resources/xsd</bindingDirectory>
+                            <bindingIncludes>
+                              <include>binding.xml</include>
+                            </bindingIncludes>
+
+						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<generatePackage>com.example.howtodoinjava.schemas.school</generatePackage>
-					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
-					<schemaDirectory>${project.basedir}/src/main/resources/wsdl</schemaDirectory>
-					<schemaIncludes>
-						<include>*.wsdl</include>
-					</schemaIncludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

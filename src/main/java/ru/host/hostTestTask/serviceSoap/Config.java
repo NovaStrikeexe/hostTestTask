@@ -17,7 +17,7 @@ public class Config {
 
     public UserServiceSoap userServiceSoap(Jaxb2Marshaller marshaller) {
         UserServiceSoap user = new UserServiceSoap();
-        user.setDefaultUri("http://localhost:8080/user");
+        user.setDefaultUri("https://cas-test.hostco.ru/RegUserService/services/RegUserService");
         user.setMarshaller(marshaller);
         user.setUnmarshaller(marshaller);
         return user;

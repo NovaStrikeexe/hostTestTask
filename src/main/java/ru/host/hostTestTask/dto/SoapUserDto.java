@@ -1,4 +1,4 @@
-package ru.host.hostTestTask.soapDto;
+package ru.host.hostTestTask.dto;
 
 import lombok.Data;
 import ru.host.hostTestTask.entities.Gender;
