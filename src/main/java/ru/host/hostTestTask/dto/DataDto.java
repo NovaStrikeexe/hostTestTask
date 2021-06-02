@@ -16,4 +16,5 @@ public class DataDto {
     private LocalDate birthDate;
     private String remdResult;
     private String codeMo;
+
 }

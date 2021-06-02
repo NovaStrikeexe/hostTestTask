@@ -1,11 +1,10 @@
 package ru.host.hostTestTask.entities;
 
 
-import javax.persistence.*;
-
 import lombok.Data;
 
-import java.time.LocalDate;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "ref_mo", schema = "archivist")
@@ -15,7 +14,7 @@ public class SaveData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-    @Column(name = "id", nullable = false)
+    @Column(name = "userId", nullable = false)
     private Long userId;
     @Column(name = "cardNumber", length = 30)
     private String cardNumber;
@@ -26,10 +25,14 @@ public class SaveData {
     @Column(name = "Middle_Name", length = 30)
     private String middleName;// отчество
     @Temporal(TemporalType.DATE)
-    private LocalDate birthdate;
+    private Date birthdate;
     @Column(name = "remdResult", length = 30)
     private String remdResult;
     @Column(name = "codeMo", length = 30)
     private String codeMo;
+    @Column(name = "date_insert",nullable = false)
+    private Date dateInsert;
+    @Column(name = "date_update",nullable = false)
+    private Date dateUpdate;
 
 }

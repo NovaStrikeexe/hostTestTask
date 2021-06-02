@@ -15,7 +15,6 @@ public class Config {
         return marshaller;
     }
 
-    @Bean
     public UserServiceSoap userServiceSoap(Jaxb2Marshaller marshaller) {
         UserServiceSoap user = new UserServiceSoap();
         user.setDefaultUri("http://localhost:8080/user");

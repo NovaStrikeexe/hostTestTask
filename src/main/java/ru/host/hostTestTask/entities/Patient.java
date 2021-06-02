@@ -3,7 +3,7 @@ package ru.host.hostTestTask.entities;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "PATIENT", schema = "archivist")
@@ -28,7 +28,7 @@ public class Patient {
     private String enp;
 
     @Temporal(TemporalType.DATE)
-    private LocalDate birthDate;
+    private Date birthDate;
 
 
 }
