@@ -7,7 +7,7 @@ public class UserInfoDto {
     private String lastName;//имя пользователя
     private String firstname;// фамилия
     private String middleName;// отчество
-    private Integer userId;// Айдшник
+    private Long userId;// Айдшник
 
 
 }

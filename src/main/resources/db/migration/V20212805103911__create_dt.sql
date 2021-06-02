@@ -20,19 +20,19 @@ CREATE TABLE archivist.dateSave(
 
 -- Column comments
 
-COMMENT ON COLUMN archivist.dt_table."id" IS 'Айдишник записи';
-COMMENT ON COLUMN archivist.dt_table."userId" IS 'Айдишник пользователя';
-COMMENT ON COLUMN archivist.dt_table."cardNumber" IS 'Номер медицинской карты';
-COMMENT ON COLUMN archivist.dt_table."lastName" IS 'Фамилия пациента';
-COMMENT ON COLUMN archivist.dt_table."firstName" IS 'Имя пациента';
-COMMENT ON COLUMN archivist.dt_table."middleName" IS 'Отчество пациента';
-COMMENT ON COLUMN archivist.dt_table."snils" IS 'Номер снилс (Страховой номер индивидуального лицевого счёта)';
-COMMENT ON COLUMN archivist.dt_table."enp" IS 'Номер полиса ОМС (Обязательного медицинского страхования)';
-COMMENT ON COLUMN archivist.dt_table."birthDate" IS 'Дата рождения пациента';
-COMMENT ON COLUMN archivist.dt_table."remdResult" IS 'Результат отправки в рэмд (реестр элеĸтронных медицинсĸих доĸументов)';
-COMMENT ON COLUMN archivist.dt_table."codeMo" IS 'Код медицинсĸой организации';
-COMMENT ON COLUMN archivist.dt_table."date_insert" IS 'Дата создания записи';
-COMMENT ON COLUMN archivist.dt_table."date_insert" IS 'Дата изменения записи';
+COMMENT ON COLUMN archivist.dateSave."id" IS 'Айдишник записи';
+COMMENT ON COLUMN archivist.dateSave."userId" IS 'Айдишник пользователя';
+COMMENT ON COLUMN archivist.dateSave."cardNumber" IS 'Номер медицинской карты';
+COMMENT ON COLUMN archivist.dateSave."lastName" IS 'Фамилия пациента';
+COMMENT ON COLUMN archivist.dateSave."firstName" IS 'Имя пациента';
+COMMENT ON COLUMN archivist.dateSave."middleName" IS 'Отчество пациента';
+COMMENT ON COLUMN archivist.dateSave."snils" IS 'Номер снилс (Страховой номер индивидуального лицевого счёта)';
+COMMENT ON COLUMN archivist.dateSave."enp" IS 'Номер полиса ОМС (Обязательного медицинского страхования)';
+COMMENT ON COLUMN archivist.dateSave."birthDate" IS 'Дата рождения пациента';
+COMMENT ON COLUMN archivist.dateSave."remdResult" IS 'Результат отправки в рэмд (реестр элеĸтронных медицинсĸих доĸументов)';
+COMMENT ON COLUMN archivist.dateSave."codeMo" IS 'Код медицинсĸой организации';
+COMMENT ON COLUMN archivist.dateSave."date_insert" IS 'Дата создания записи';
+COMMENT ON COLUMN archivist.dateSave."date_insert" IS 'Дата изменения записи';
 
 -- Permissions
 

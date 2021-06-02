@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 @Data
 public class DataDto {
-    private int userId;
+    private Long userId;
     private String cardNumber;
     private String lastName;
     private String firstName;
