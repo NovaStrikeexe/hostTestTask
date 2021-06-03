@@ -8,6 +8,7 @@ import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 @Service
 @Scope(value = "session")
 @Component(value = "userServiceSoap")
+
 public class UserServiceSoap extends WebServiceGatewaySupport {
     public Object callWebService(String url, Object request){
         return getWebServiceTemplate().marshalSendAndReceive(url, request);

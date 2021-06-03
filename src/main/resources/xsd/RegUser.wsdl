@@ -3,7 +3,7 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.hostco.ru/reguser" targetNamespace="http://www.hostco.ru/reguser">
 	<wsdl:types>
 		<xsd:schema xmlns:rt="http://www.hostco.ru/reguser/types" targetNamespace="http://www.hostco.ru/reguser" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-			<xs:import namespace="http://www.hostco.ru/reguser/types" schemaLocation="../../../../../../java-students-task-2020/Архивариус/Архивариус/Доп информация для написания архивариуса/RegUserService/types.xsd"/>
+			<xs:import namespace="http://www.hostco.ru/reguser/types" schemaLocation="types.xsd"/>
 			<xsd:element name="regUserRequest" type="rt:RegUserRequestType"/>
 			<xsd:element name="regUserResponse" type="rt:RegUserResponseType"/>
 			<xsd:element name="editUserRequest" type="rt:EditUserRequestType"/>

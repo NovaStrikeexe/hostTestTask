@@ -4,5 +4,15 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     password: 1234
-    url: jdbc:postgresql://localhost/Test3
-    username: postgres
+    url: jdbc:postgresql://localhost/db_HOSTGK
+    username: archi
+  flyway:
+    password: 1234
+    url: jdbc:postgresql://localhost/db_HOSTGK
+    user: postgres
+
+app:
+  SOAP:
+    Token:"D468E929-A94E-4F16-A7D2-DB414EC53071"
+    URL:"https://cas-test.hostco.ru/RegUserService/services/RegUserService"
+  REST:
