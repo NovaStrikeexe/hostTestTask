@@ -7,6 +7,6 @@ import ru.host.hostTestTask.dto.UserDto;
 import java.util.List;
 @Repository
 public interface UserInfoRepository extends JpaRepository<UserDto, Integer> {
-    List<UserDto> findByUserId(Integer userID);
+    List<UserDto> findBySnils(String snils);
 
 }

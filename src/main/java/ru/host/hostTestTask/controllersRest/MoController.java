@@ -16,7 +16,8 @@ public class MoController {
 
     @GetMapping("/mo")
     List<MoListDto> all() {
-        return moListRepository.findByIsShownTrue();
+        return null;
+        //return moListRepository.findByIsShownTrue();
     }
 
 }

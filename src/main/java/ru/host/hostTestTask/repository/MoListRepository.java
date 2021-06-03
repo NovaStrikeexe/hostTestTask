@@ -8,5 +8,4 @@ import java.util.List;
 public interface MoListRepository extends JpaRepository<MoListDto, Integer> {
     List<MoListDto> findByIsShownTrue(Boolean is_shown);
 
-    List<MoListDto> findByIsShownTrue();
 }
