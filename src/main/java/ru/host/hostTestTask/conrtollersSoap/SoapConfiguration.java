@@ -5,11 +5,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 @Configuration
-public class SoapConfuguration {
+public class SoapConfiguration {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("ru.host.hostTestTask.en.");
+        marshaller.setContextPath("");
         return marshaller;
     }
 

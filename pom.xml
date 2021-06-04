@@ -110,7 +110,7 @@
                             </schemas>
                             <bindingDirectory>src/main/resources/xsd</bindingDirectory>
                             <bindingIncludes>
-                                <include>binding.xml</include>
+                                <include>src/main/resources/xsd/binding.xml</include>
                             </bindingIncludes>
                         </configuration>
                     </execution>
