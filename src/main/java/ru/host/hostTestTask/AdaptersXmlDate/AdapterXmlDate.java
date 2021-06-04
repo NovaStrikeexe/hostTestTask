@@ -1,4 +1,4 @@
-package ru.hostco.dvs.mpi.utility.date;
+package ru.host.hostTestTask.AdaptersXmlDate;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
