@@ -9,14 +9,14 @@ public class SoapConfiguration {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("");
+        marshaller.setContextPath("ru.hostco.reguser.type");
         return marshaller;
     }
 
     @Bean
     public SoapConnector soapConnector(Jaxb2Marshaller marshaller) {
         SoapConnector client = new SoapConnector();
-        client.setDefaultUri("http://localhost:8080/service/student-details");
+        client.setDefaultUri("http://www.hostco.ru/reguser/User");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;

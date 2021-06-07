@@ -1,12 +1,13 @@
 package ru.host.hostTestTask.mapers;
 
+import lombok.Data;
 import ru.host.hostTestTask.dto.UserDto;
 import ru.host.hostTestTask.entities.User;
 
 /**
  * UserMapper отвечает за контракт между UserDto & User
  */
-
+@Data
 public class UserMapper {
     public static User userMapper(UserDto userDto) {
         User user = new User();
