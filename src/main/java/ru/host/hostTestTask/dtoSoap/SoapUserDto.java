@@ -1,4 +1,4 @@
-package ru.host.hostTestTask.soapDto;
+package ru.host.hostTestTask.dtoSoap;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,10 @@ import ru.hostco.reguser.types.LoginStrictType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 /*
- * Класс под работу с Soap через инфу из запроса /getUser
+ * Класс под работу с Soap через инфу из запроса /getUser (из ru.hostco.reguser.types)
+ * Есть два вариант как производить с ними работу maven и напрямую
+ * Первый вариант необходим тк это временные файлы
+ * TODO перед отпровкой тз подготовить архив с данным пакетом
  * */
 @Data
 @AllArgsConstructor

@@ -21,8 +21,8 @@ public class User {
 
     @Column(name = "Middle_Name", length = 30, nullable = true)
     private String middleName;// отчество
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+    @Column(name = "Gender", length = 1, nullable = true)
+    private Integer gender;
 
     @Column(name = "Snils", length = 30, nullable = true)
     private String snils;
