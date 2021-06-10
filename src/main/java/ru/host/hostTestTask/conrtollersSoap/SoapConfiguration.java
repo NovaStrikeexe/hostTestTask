@@ -12,7 +12,6 @@ public class SoapConfiguration {
         marshaller.setContextPath("ru.hostco.reguser.type");
         return marshaller;
     }
-
     @Bean
     public SoapConnector soapConnector(Jaxb2Marshaller marshaller) {
         SoapConnector client = new SoapConnector();
