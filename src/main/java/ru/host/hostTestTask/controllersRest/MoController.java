@@ -1,23 +1,24 @@
 package ru.host.hostTestTask.controllersRest;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 import ru.host.hostTestTask.dto.MoListDto;
+import ru.host.hostTestTask.entities.Mo;
 import ru.host.hostTestTask.repository.MoListRepository;
-
-import java.util.List;
-
-@RestController
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
-public class MoController {
+// TODO https://stackoverflow.com/questions/26549379/when-use-responseentityt-and-restcontroller-for-spring-restful-applications
+@RestController("MoController")
+public class MoController extends WebServiceGatewaySupport {
     private final MoListRepository moListRepository;
 
-    @GetMapping("/mo")
-    List<MoListDto> all() {
-        return null;
-        //return moListRepository.findByIsShownTrue();
+    MoController(MoListRepository moListRepository) {
+        this.moListRepository = moListRepository;
     }
 
+    public ResponseEntity<Mo> getMo(){
+        final MoListDto  moListDto = new MoListDto();
+        return null;
+    }
 }
