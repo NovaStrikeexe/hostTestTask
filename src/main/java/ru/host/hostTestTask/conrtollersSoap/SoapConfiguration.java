@@ -9,7 +9,7 @@ public class SoapConfiguration {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("ru.hostco.reguser.type");
+        marshaller.setContextPath("ru.hostco.reguser.types");
         return marshaller;
     }
     @Bean
