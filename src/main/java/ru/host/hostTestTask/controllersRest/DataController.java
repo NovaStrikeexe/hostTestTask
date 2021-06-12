@@ -12,7 +12,7 @@ import java.util.List;
 @RestController("DataController")
 @RequestMapping("/data")
 @RequiredArgsConstructor
-public class DataController extends WebServiceGatewaySupport {
+public class DataController  {
     private DataRepository dataRepository;
     List<DataDto> all(){
         //return dataRepository.saveAllData();

@@ -10,7 +10,7 @@ public class UserSoapServiceImpl implements UserSoapService {
     private UserInfoRepository userInfoRepository;
 
     @Override
-    public UserController getUser(String snils) {
-        return (UserController) userInfoRepository.findBySnils(snils);
+    public User getUser(String snils) {
+        return (User) userInfoRepository.findBySnils(snils);
     }
 }
