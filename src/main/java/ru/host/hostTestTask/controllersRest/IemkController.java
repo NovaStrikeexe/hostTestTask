@@ -14,6 +14,9 @@ import java.util.List;
 @Data
 public class IemkController{
     private final IemkRepository iemkRepository;
+    public IemkController(IemkRepository iemkRepository){
+        this.iemkRepository = iemkRepository;
+    }
 
 
     List<PatientDto> all() {

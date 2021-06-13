@@ -1,5 +1,6 @@
 package ru.host.hostTestTask.conrtollersSoap;
 
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import ru.hostco.reguser.types.ObjectFactory;
 @Controller("UserController")
 @RequestMapping("/user")
 @RequiredArgsConstructor
+@Data
 public class UserController extends WebServiceGatewaySupport {
     final String soapToken = "D468E929-A94E-4F16-A7D2-DB414EC53071";
     final String soapUrl = "http://www.hostco.ru/reguser";
