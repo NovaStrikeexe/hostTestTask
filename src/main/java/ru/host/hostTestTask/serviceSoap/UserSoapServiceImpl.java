@@ -1,16 +1,39 @@
 package ru.host.hostTestTask.serviceSoap;
 
+import lombok.Data;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import ru.host.hostTestTask.conrtollersSoap.UserController;
-import ru.host.hostTestTask.entities.User;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.server.ResponseStatusException;
+import ru.host.hostTestTask.conrtollersSoap.UserSoapManager;
+import ru.host.hostTestTask.dto.UserDto;
+import ru.host.hostTestTask.dtoSoap.SoapUserDto;
+import ru.host.hostTestTask.exceptions.EventException;
 import ru.host.hostTestTask.repository.UserInfoRepository;
 
 @Service
+@Data
 public class UserSoapServiceImpl implements UserSoapService {
-    private UserInfoRepository userInfoRepository;
+    private final UserInfoRepository userInfoRepository;
 
-    @Override
-    public User getUser(String snils) {
-        return (User) userInfoRepository.findBySnils(snils);
+    public UserSoapServiceImpl(UserInfoRepository userInfoRepository) {
+        this.userInfoRepository = userInfoRepository;
+    }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<UserDto> getUser(@RequestParam(value = "snils") String snils) {
+        try {
+            final SoapUserDto soapUserDto = UserSoapManager.getUser(snils);
+            final Long userId = Long.parseLong(soapUserDto.getSnils());
+            final String lastName = soapUserDto.getLastName();
+            final String firstname = soapUserDto.getFirstname();
+            final String middleName = soapUserDto.getMiddleName();
+            return new ResponseEntity<UserDto>(new UserDto(userId, lastName, firstname, middleName), HttpStatus.OK);
+
+        } catch (EventException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
+        }
     }
 }

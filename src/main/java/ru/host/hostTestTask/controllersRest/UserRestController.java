@@ -1,29 +1,28 @@
 package ru.host.hostTestTask.controllersRest;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import ru.host.hostTestTask.dto.UserDto;
-import ru.host.hostTestTask.entities.User;
-import ru.host.hostTestTask.mapers.UserMapper;
-import ru.host.hostTestTask.repository.UserInfoRepository;
-import ru.host.hostTestTask.serviceSoap.UserSoapService;
+import ru.host.hostTestTask.serviceSoap.UserSoapServiceImpl;
 
 @RestController("UserRestController")
-@Data
 public class UserRestController {
-    private final UserInfoRepository userInfoRepository;
-    private final UserSoapService userSoapService;
+    private final UserSoapServiceImpl userSoapServiceImpl;
 
-    public UserRestController(UserInfoRepository userInfoRepository, UserSoapService userSoapService) {
-        this.userInfoRepository = userInfoRepository;
-        this.userSoapService = userSoapService;
+    public UserRestController(UserSoapServiceImpl userSoapServiceImpl) {
+        this.userSoapServiceImpl = userSoapServiceImpl;
     }
 
-    @GetMapping("/user")
-    public UserDto getUser(String snils){
-        User user = userSoapService.getUser(snils);
-        return UserMapper.INSTACE.toDto(user);
+    @GetMapping("/user/{snils}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<UserDto> getUserSoapServiceImpl(@RequestParam(value = "snils")String snils) {
+        return userSoapServiceImpl.getUser(snils);
     }
+
+
+
 }

@@ -14,7 +14,7 @@ import ru.hostco.reguser.types.ObjectFactory;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @Data
-public class UserController extends WebServiceGatewaySupport {
+public class UserSoapController extends WebServiceGatewaySupport {
     final String soapToken = "D468E929-A94E-4F16-A7D2-DB414EC53071";
     final String soapUrl = "http://www.hostco.ru/reguser";
     final String getUser = "/getUser";

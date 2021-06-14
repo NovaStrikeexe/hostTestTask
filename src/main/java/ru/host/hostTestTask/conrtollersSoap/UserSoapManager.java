@@ -9,12 +9,12 @@ import ru.hostco.reguser.types.GetUserResponseType;
 @Component
 public class UserSoapManager {
     @Autowired
-    void setUserController(UserController userController){
-        UserSoapManager.userController = userController;
+    void setUserController(UserSoapController userSoapController){
+        UserSoapManager.userSoapController = userSoapController;
     }
-    private static UserController userController;
+    private static UserSoapController userSoapController;
     public static SoapUserDto getUser(String snils){
-        final GetUserResponseType getUserResponseType = userController.getUser(snils);
+        final GetUserResponseType getUserResponseType = userSoapController.getUser(snils);
         if(getUserResponseType.getError().getErrorCode() != 0){
             throw new EventException(getUserResponseType.getError().getErrorText());
         }
