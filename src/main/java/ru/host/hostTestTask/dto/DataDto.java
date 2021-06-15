@@ -3,6 +3,7 @@ package ru.host.hostTestTask.dto;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 public class DataDto {
@@ -13,7 +14,7 @@ public class DataDto {
     private String middleName;
     private String snils;
     private String enp;
-    private LocalDate birthDate;
+    private Date birthDate;
     private String remdResult;
     private String codeMo;
 

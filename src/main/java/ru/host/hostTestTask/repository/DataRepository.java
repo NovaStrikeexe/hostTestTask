@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository
 public interface DataRepository extends JpaRepository<DataDto, Long> {
-    List<DataDto> saveAllData(Long userId, String cardNumber, String lastName, String firstName, String middleName, String snils, String enp, Date birthDate, Boolean remdResult, String codeMo);
+    List<DataDto> SaveAllData(Long userId, String cardNumber, String lastName, String firstName, String middleName, String snils, String enp, Date birthDate, String remdResult, String codeMo);
 }

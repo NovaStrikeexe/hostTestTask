@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.server.ResponseStatusException;
@@ -21,15 +22,15 @@ public class UserSoapServiceImpl implements UserSoapService {
     public UserSoapServiceImpl(UserInfoRepository userInfoRepository) {
         this.userInfoRepository = userInfoRepository;
     }
-
+    @GetMapping("/user/{snils}")
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<UserDto> getUser(@RequestParam(value = "snils") String snils) {
         try {
             final SoapUserDto soapUserDto = UserSoapManager.getUser(snils);
-            final Long userId = Long.parseLong(soapUserDto.getSnils());
-            final String lastName = soapUserDto.getLastName();
-            final String firstname = soapUserDto.getFirstname();
-            final String middleName = soapUserDto.getMiddleName();
+            Long userId = Long.parseLong(soapUserDto.getSnils());
+            String lastName = soapUserDto.getLastName();
+            String firstname = soapUserDto.getFirstname();
+            String middleName = soapUserDto.getMiddleName();
             return new ResponseEntity<UserDto>(new UserDto(userId, lastName, firstname, middleName), HttpStatus.OK);
 
         } catch (EventException e) {
