@@ -9,6 +9,6 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface DataRepository extends JpaRepository<SaveData, Long> {
-    List<SaveData> saveAllData(Long userId, String cardNumber, String lastName, String firstName, String middleName, String snils, String enp, Date birthDate, Boolean remdResult, String codeMo);
+public interface DataRepository extends JpaRepository<DataDto, Long> {
+    List<DataDto> saveAllData(Long userId, String cardNumber, String lastName, String firstName, String middleName, String snils, String enp, Date birthDate, Boolean remdResult, String codeMo);
 }

@@ -1,11 +1,12 @@
 package ru.host.hostTestTask.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.host.hostTestTask.entities.Mo;
+import org.springframework.stereotype.Repository;
+import ru.host.hostTestTask.dto.MoDto;
 
 import java.util.List;
-
-public interface MoListRepository extends JpaRepository<Mo, Long> {
-    List<Mo> findByIsShownTrue(Boolean is_shown);
+@Repository
+public interface MoListRepository extends JpaRepository<MoDto, Long> {
+    List<MoDto> findByIsShownTrue(Boolean is_shown);
 
 }
