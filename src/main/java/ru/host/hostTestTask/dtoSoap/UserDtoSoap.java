@@ -11,7 +11,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * Первый вариант необходим тк это временные файлы
  * TODO перед отпровкой тз подготовить архив с данным пакетом
  * */
-public class SoapUserDto {
+public class UserDtoSoap {
     private String snils;
     private String lastName;//имя пользователя
     private String firstname;// фамилия
@@ -23,7 +23,7 @@ public class SoapUserDto {
     private String PolicyNumber;
     private DocumentsType documentsType;
 
-    public SoapUserDto(GetUserResponseType getUserResponseType) {
+    public UserDtoSoap(GetUserResponseType getUserResponseType) {
     }
 
 
@@ -109,8 +109,8 @@ public class SoapUserDto {
 
     public boolean equals(final Object o) {
         if (o == this) return true;
-        if (!(o instanceof SoapUserDto)) return false;
-        final SoapUserDto other = (SoapUserDto) o;
+        if (!(o instanceof UserDtoSoap)) return false;
+        final UserDtoSoap other = (UserDtoSoap) o;
         if (!other.canEqual((Object) this)) return false;
         final Object this$snils = this.getSnils();
         final Object other$snils = other.getSnils();
@@ -149,7 +149,7 @@ public class SoapUserDto {
     }
 
     protected boolean canEqual(final Object other) {
-        return other instanceof SoapUserDto;
+        return other instanceof UserDtoSoap;
     }
 
     public int hashCode() {
