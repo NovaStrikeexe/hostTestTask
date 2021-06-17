@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import ru.host.hostTestTask.entities.SaveData;
+import ru.host.hostTestTask.exceptions.ResponseException;
 import ru.host.hostTestTask.repository.DataRepository;
 
 import java.util.Objects;
@@ -25,7 +26,7 @@ public class DataRestServiceImpl implements DataRestService {
                     saveData.getFirstname(), saveData.getMiddleName(), saveData.getSnils(), saveData.getEnp(), saveData.getBirthdate(), saveData.getRemdResult(), saveData.getCodeMo());
         }
         else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"It looks like UserId is null");
+            throw new ResponseException(HttpStatus.BAD_REQUEST,"It looks like UserId is null");
         }
 
     }

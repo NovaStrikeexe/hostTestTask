@@ -5,5 +5,5 @@ import ru.host.hostTestTask.entities.SaveData;
 
 @Service
 public interface DataRestService {
-    public void SaveAllData(SaveData saveData);
+    void SaveAllData(SaveData saveData);
 }
