@@ -20,6 +20,4 @@ public class UserRestController {
         return userSoapService.getUser(snils);
     }
 
-
-
 }
