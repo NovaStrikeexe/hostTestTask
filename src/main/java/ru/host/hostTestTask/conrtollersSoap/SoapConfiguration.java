@@ -1,5 +1,6 @@
 package ru.host.hostTestTask.conrtollersSoap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -13,9 +14,10 @@ public class SoapConfiguration {
         return marshaller;
     }
     @Bean
+    @Autowired
     public SoapConnector soapConnector(Jaxb2Marshaller marshaller) {
         SoapConnector client = new SoapConnector();
-        client.setDefaultUri("http://localhost:8088");
+        client.setDefaultUri("https://cas-test.hostco.ru/RegUserService/services/RegUserService?wsdl");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;

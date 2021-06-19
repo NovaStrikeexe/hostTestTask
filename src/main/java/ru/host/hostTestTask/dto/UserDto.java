@@ -1,10 +1,23 @@
 package ru.host.hostTestTask.dto;
 
+
 public class UserDto {
-    private Long userId;// Айдшник
-    private String lastName;//имя пользователя
-    private String firstname;// фамилия
-    private String middleName;// отчество
+    /**
+     * userId = Уникальный номер пользователея
+     */
+    private Long userId;
+    /**
+     * lastName = Фамилия пользователя
+     */
+    private String lastName;
+    /**
+     * firstName = Имя пользователя
+     */
+    private String firstname;
+    /**
+     * middleName = Отчество пользователя
+     */
+    private String middleName;
 
     public UserDto(Long userId, String lastName, String firstname, String middleName) {
     }
@@ -83,4 +96,5 @@ public class UserDto {
     public String toString() {
         return "UserDto(userId=" + this.getUserId() + ", lastName=" + this.getLastName() + ", firstname=" + this.getFirstname() + ", middleName=" + this.getMiddleName() + ")";
     }
+
 }

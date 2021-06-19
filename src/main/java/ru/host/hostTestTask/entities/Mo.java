@@ -4,12 +4,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name = "ref_mo.findByIsShownTrue",query = "select m from ref_mo m where m.is_shown = TRUE ")
 @Table(name = "ref_mo", schema = "archivist")
 @Data
 @NoArgsConstructor

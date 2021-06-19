@@ -12,4 +12,5 @@ public class HostTestTaskApplication {
 		SpringApplication.run(HostTestTaskApplication.class, args);
 	}
 
+
 }

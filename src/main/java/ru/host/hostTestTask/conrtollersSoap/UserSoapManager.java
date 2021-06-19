@@ -15,7 +15,7 @@ public class UserSoapManager {
     private static UserSoapController userSoapController;
     public static UserDtoSoap getUser(String snils){
         final GetUserResponseType getUserResponseType = userSoapController.getUser(snils);
-        if(getUserResponseType.getError().getErrorCode() != 0){
+        if(getUserResponseType.getError().getErrorCode() != 200){
             throw new EventException(getUserResponseType.getError().getErrorText());
         }
         return new UserDtoSoap(getUserResponseType);
