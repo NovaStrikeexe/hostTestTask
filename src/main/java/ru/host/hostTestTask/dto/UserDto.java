@@ -1,7 +1,13 @@
 package ru.host.hostTestTask.dto;
 
 
+/**
+ *
+ * UserDto - Класс для хранения данных используемых в слое представления типа User
+ *
+ */
 public class UserDto {
+
     /**
      * userId = Уникальный номер пользователея
      */
@@ -19,41 +25,75 @@ public class UserDto {
      */
     private String middleName;
 
+    /**
+     * Стандартный конструктор класса
+     * @param userId
+     * @param lastName
+     * @param firstname
+     * @param middleName
+     */
+
     public UserDto(Long userId, String lastName, String firstname, String middleName) {
-    }
-
-    public Long getUserId() {
-        return this.userId;
-    }
-
-    public String getLastName() {
-        return this.lastName;
-    }
-
-    public String getFirstname() {
-        return this.firstname;
-    }
-
-    public String getMiddleName() {
-        return this.middleName;
-    }
-
-    public void setUserId(Long userId) {
         this.userId = userId;
-    }
-
-    public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public void setFirstname(String firstname) {
         this.firstname = firstname;
-    }
-
-    public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
 
+    /**
+     * Пустой конструктор класса
+     */
+    public UserDto() {
+    }
+
+    /*Блок геттеров*/
+
+    /**
+     * @return userID
+     */
+    public Long getUserId() { return this.userId; }
+
+    /**
+     * @return lastName
+     */
+    public String getLastName() { return this.lastName; }
+
+    /**
+     * @return firstName
+     */
+    public String getFirstname() { return this.firstname; }
+
+    /**
+     * @return middleName
+     */
+    public String getMiddleName() { return this.middleName; }
+
+    /*Блок сеттеров*/
+
+    /**
+     * @param userId
+     */
+    public void setUserId(Long userId) { this.userId = userId; }
+
+    /**
+     * @param lastName
+     */
+    public void setLastName(String lastName) { this.lastName = lastName; }
+
+    /**
+     * @param firstname
+     */
+    public void setFirstname(String firstname) { this.firstname = firstname; }
+
+    /**
+     * @param middleName
+     */
+    public void setMiddleName(String middleName) { this.middleName = middleName; }
+
+    /**
+     * @param o Проверка на эквивалетность
+     * @return Boolean (True/False)
+     */
     public boolean equals(final Object o) {
         if (o == this) return true;
         if (!(o instanceof UserDto)) return false;
@@ -75,10 +115,15 @@ public class UserDto {
         return true;
     }
 
-    protected boolean canEqual(final Object other) {
-        return other instanceof UserDto;
-    }
+    /**
+     * @param other
+     * @return instanceof UserDto
+     */
+    protected boolean canEqual(final Object other) { return other instanceof UserDto; }
 
+    /**
+     * @return result(parameters converted to hashcode)
+     */
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -93,6 +138,9 @@ public class UserDto {
         return result;
     }
 
+    /**
+     * @return A String with the output of all data from Userdto
+     */
     public String toString() {
         return "UserDto(userId=" + this.getUserId() + ", lastName=" + this.getLastName() + ", firstname=" + this.getFirstname() + ", middleName=" + this.getMiddleName() + ")";
     }

@@ -24,9 +24,10 @@ public class UserSoapServiceImpl implements UserSoapService {
     public ResponseEntity<UserDto> getUser(@RequestParam(value = "snils") String snils) {
         try {
             GetUserRequestType getUserRequestType = new GetUserRequestType();
+            GetUserResponseType getUserResponseType = new GetUserResponseType();
             getUserRequestType.setSNILS(snils);
-            getUserRequestType.setToken("${app.SOAP.Token}");
-            GetUserResponseType getUserResponseType = (GetUserResponseType) soapConnector.callWebService("http://localhost:8088",getUserRequestType);
+            getUserRequestType.setToken("D468E929-A94E-4F16-A7D2-DB414EC53071");
+            getUserResponseType = (GetUserResponseType) soapConnector.callWebService("http://localhost:8088",getUserRequestType);
             UserDto userDto = new UserDto(
                     Long.parseLong(getUserResponseType.getSNILS()),
                     getUserResponseType.getLogin().getFirstname(),

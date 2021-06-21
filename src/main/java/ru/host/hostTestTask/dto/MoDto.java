@@ -1,37 +1,85 @@
 package ru.host.hostTestTask.dto;
 
+/**
+ *
+ */
 public class MoDto {
+    /**
+     *
+     */
     private String shortName;
+    /**
+     *
+     */
     private String codeMo;
+    /**
+     *
+     */
     private Boolean isShown;
 
+    /**
+     *
+     */
     public MoDto() {
     }
 
+    /**
+     * @param shortName
+     * @param codeMo
+     * @param isShown
+     */
+    public MoDto(String shortName, String codeMo, Boolean isShown) {
+        this.shortName = shortName;
+        this.codeMo = codeMo;
+        this.isShown = isShown;
+    }
+
+    /**
+     * @return
+     */
     public String getShortName() {
         return this.shortName;
     }
 
+    /**
+     * @return
+     */
     public String getCodeMo() {
         return this.codeMo;
     }
 
+    /**
+     * @return
+     */
     public Boolean getIsShown() {
         return this.isShown;
     }
 
+    /**
+     * @param shortName
+     */
     public void setShortName(String shortName) {
         this.shortName = shortName;
     }
 
+    /**
+     * @param codeMo
+     */
     public void setCodeMo(String codeMo) {
         this.codeMo = codeMo;
     }
 
+    /**
+     * @param isShown
+     */
     public void setIsShown(Boolean isShown) {
         this.isShown = isShown;
     }
 
+    /**
+     * @param o
+     * @return
+     */
     public boolean equals(final Object o) {
         if (o == this) return true;
         if (!(o instanceof MoDto)) return false;
@@ -53,6 +101,9 @@ public class MoDto {
         return other instanceof MoDto;
     }
 
+    /**
+     * @return
+     */
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -65,6 +116,9 @@ public class MoDto {
         return result;
     }
 
+    /**
+     * @return
+     */
     public String toString() {
         return "MoDto(shortName=" + this.getShortName() + ", codeMo=" + this.getCodeMo() + ", isShown=" + this.getIsShown() + ")";
     }

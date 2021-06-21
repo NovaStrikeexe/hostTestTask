@@ -18,9 +18,9 @@ import ru.hostco.reguser.types.ObjectFactory;
 
 public class UserSoapController extends WebServiceGatewaySupport {
 
-    final private String soapToken = "D468E929-A94E-4F16-A7D2-DB414EC53071";
-    final private String soapUrl = "http://localhost:8088";
-    final private String getUser = "/getUser";
+    final private String soapToken = "${app.SOAP.Token}";
+    final private String soapUrl = "${app.SOAP.URL}";
+    final private String getUser = "/user";
     public GetUserResponseType getUser(String snils) {
         ObjectFactory objectFactory = new ObjectFactory();
         GetUserRequestType getUserRequestType = objectFactory.createGetUserRequestType();

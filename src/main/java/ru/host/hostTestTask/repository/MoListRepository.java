@@ -7,5 +7,5 @@ import ru.host.hostTestTask.entities.Mo;
 import java.util.List;
 @Repository
 public interface MoListRepository extends JpaRepository<Mo, Long> {
-    List<Mo> findByIsShownTrue(Boolean is_shown);
+    List<Mo> findByIsShownTrue();
 }
