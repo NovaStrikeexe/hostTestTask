@@ -72,6 +72,14 @@
             <artifactId>mapstruct</artifactId>
             <version>${org.mapstruct.version}</version>
         </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -102,7 +110,7 @@
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.14.0</version>
+                <version>0.13.2</version>
                 <executions>
                     <execution>
                         <id>reguser-service</id>
@@ -121,7 +129,7 @@
                             </schemas>
                             <bindingDirectory>src/main/resources/xsd</bindingDirectory>
                             <bindingIncludes>
-                              <include>binding.xml</include>
+                                <include>src/main/resources/xsd/binding.xml</include>
                             </bindingIncludes>
                         </configuration>
                     </execution>
