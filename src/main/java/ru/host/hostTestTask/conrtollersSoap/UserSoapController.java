@@ -11,6 +11,9 @@ import ru.hostco.reguser.types.GetUserRequestType;
 import ru.hostco.reguser.types.GetUserResponseType;
 import ru.hostco.reguser.types.ObjectFactory;
 
+/**
+ *
+ */
 @Controller("UserController")
 @RequestMapping("/user")
 @RequiredArgsConstructor
@@ -18,8 +21,8 @@ import ru.hostco.reguser.types.ObjectFactory;
 
 public class UserSoapController extends WebServiceGatewaySupport {
 
-    final private String soapToken = "${app.SOAP.Token}";
-    final private String soapUrl = "${app.SOAP.URL}";
+    final private String soapToken = "D468E929-A94E-4F16-A7D2-DB414EC53071";
+    final private String soapUrl = "https://cas-test.hostco.ru/RegUserService/services/RegUserService";
     final private String getUser = "/user";
     public GetUserResponseType getUser(String snils) {
         ObjectFactory objectFactory = new ObjectFactory();

@@ -2,9 +2,7 @@ package ru.host.hostTestTask.dto;
 
 
 /**
- *
  * UserDto - Класс для хранения данных используемых в слое представления типа User
- *
  */
 public class UserDto {
 

@@ -9,15 +9,12 @@ import ru.host.hostTestTask.dto.PatientListDto;
 @FeignClient(value = "IemkRestClient", url = "${app.REST.RestURL}")
 public interface IemkRestClient {
     @RequestMapping(method = RequestMethod.GET,
-            value = "iemk?patientSnils={snils}&patientLastName={lastNane}",
-            produces = "application/json")
+            value = "iemk?patientSnils={snils}&patientLastName={lastNane}")
     PatientListDto getPatientBySnilsAndSnils(@PathVariable("snils")String snils,@PathVariable("lastName")String lastNane);
     @RequestMapping(method = RequestMethod.GET,
-            value = "iemk?patientSnils={snils}",
-            produces = "application/json")
+            value = "iemk?patientSnils={snils}")
     PatientListDto getPatientBySnils(@PathVariable("snils")String snils);
     @RequestMapping(method = RequestMethod.GET,
-            value = "iemk?patientLastName={lastNane}",
-            produces = "application/json")
+            value = "iemk?patientLastName={lastNane}")
     PatientListDto getPatientByLastName(@PathVariable("lastName")String lastNane);
 }

@@ -1,29 +1,30 @@
 package ru.host.hostTestTask.dto;
 
 /**
- *
+ * MoDto - Класс для хранения данных используемых в слое представления типа Mo
  */
 public class MoDto {
     /**
-     *
+     * Краткое название Медицинской Организации
      */
     private String shortName;
     /**
-     *
+     * Код Медицинской Организации
      */
     private String codeMo;
     /**
-     *
+     * Параметр отбражения в приложении
      */
     private Boolean isShown;
 
     /**
-     *
+     * Стадартный пустой конструктор
      */
     public MoDto() {
     }
 
     /**
+     * Стандартный конструктор класса
      * @param shortName
      * @param codeMo
      * @param isShown
@@ -35,21 +36,21 @@ public class MoDto {
     }
 
     /**
-     * @return
+     * @return shortName
      */
     public String getShortName() {
         return this.shortName;
     }
 
     /**
-     * @return
+     * @return codeMo
      */
     public String getCodeMo() {
         return this.codeMo;
     }
 
     /**
-     * @return
+     * @return isShown
      */
     public Boolean getIsShown() {
         return this.isShown;
@@ -77,8 +78,8 @@ public class MoDto {
     }
 
     /**
-     * @param o
-     * @return
+     * @param o Проверка на эквивалетность
+     * @return Boolean (True/False)
      */
     public boolean equals(final Object o) {
         if (o == this) return true;
@@ -102,7 +103,7 @@ public class MoDto {
     }
 
     /**
-     * @return
+     * @return result(parameters converted to hashcode)
      */
     public int hashCode() {
         final int PRIME = 59;
@@ -117,7 +118,7 @@ public class MoDto {
     }
 
     /**
-     * @return
+     * @return A String with the output of all data from MoDto
      */
     public String toString() {
         return "MoDto(shortName=" + this.getShortName() + ", codeMo=" + this.getCodeMo() + ", isShown=" + this.getIsShown() + ")";

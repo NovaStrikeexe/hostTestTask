@@ -2,8 +2,10 @@ package ru.host.hostTestTask.entities;
 
 import javax.persistence.*;
 
+/**
+ * Класс сущности MO(Медициская Организация) отвечающий за работу с базой с таблицей: ref_mo, в схеме archivist
+ */
 @Entity
-//@NamedQuery(name = "ref_mo.findByIsShownTrue")
 @Table(name = "ref_mo", schema = "archivist")
 public class Mo {
     @Column(name = "oid")
@@ -20,8 +22,7 @@ public class Mo {
     @Column(name = "is_shown")
     private Boolean isShown;
 
-    public Mo() {
-    }
+    public Mo() { }
 
     public String getOid() {
         return this.oid;

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 import ru.host.hostTestTask.conrtollersSoap.SoapConnector;
 import ru.host.hostTestTask.dto.UserDto;
-import ru.host.hostTestTask.exceptions.EventException;
+import ru.host.hostTestTask.exceptions.SoapEventException;
 import ru.hostco.reguser.types.GetUserRequestType;
 import ru.hostco.reguser.types.GetUserResponseType;
 
@@ -35,7 +35,7 @@ public class UserSoapServiceImpl implements UserSoapService {
                     getUserResponseType.getLogin().getMiddlename());
             return new ResponseEntity<>(userDto, HttpStatus.OK);
 
-        } catch (EventException e) {
+        } catch (SoapEventException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
         }
     }

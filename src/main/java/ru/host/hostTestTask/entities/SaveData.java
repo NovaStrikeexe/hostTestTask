@@ -4,6 +4,10 @@ package ru.host.hostTestTask.entities;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Класса SaveData, отвечает за сохраниние пользовательских данных в базе данных в таблице: datasave,
+ * В Схеме: archivist
+ */
 @Entity
 @Table(name = "datasave", schema = "archivist")
 public class SaveData {
@@ -16,11 +20,11 @@ public class SaveData {
     @Column(name = "cardNumber", length = 30)
     private String cardNumber;
     @Column(name = "lastName", length = 30)
-    private String lastName;//имя пользователя
+    private String lastName;
     @Column(name = "firstName", length = 30)
-    private String firstname;// фамилия
+    private String firstname;
     @Column(name = "middleName", length = 30)
-    private String middleName;// отчество
+    private String middleName;
     @Column(name = "snils", length = 30)
     private String snils;
     @Column(name = "enp", length = 30)

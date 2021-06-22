@@ -102,7 +102,7 @@
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.13.2</version>
+                <version>0.14.0</version>
                 <executions>
                     <execution>
                         <id>reguser-service</id>
@@ -121,7 +121,7 @@
                             </schemas>
                             <bindingDirectory>src/main/resources/xsd</bindingDirectory>
                             <bindingIncludes>
-                                <include>src/main/resources/xsd/binding.xml</include>
+                              <include>binding.xml</include>
                             </bindingIncludes>
                         </configuration>
                     </execution>

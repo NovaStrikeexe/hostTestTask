@@ -3,6 +3,9 @@ package ru.host.hostTestTask.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 
+/**
+ * ResponseException класс обработки ошибок ответов
+ */
 public class ResponseException extends ResponseStatusException {
     public ResponseException(HttpStatus status) {
         super(status);

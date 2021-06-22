@@ -5,6 +5,10 @@ import org.springframework.stereotype.Repository;
 import ru.host.hostTestTask.entities.Mo;
 
 import java.util.List;
+
+/**
+ *
+ */
 @Repository
 public interface MoListRepository extends JpaRepository<Mo, Long> {
     List<Mo> findByIsShownTrue();
