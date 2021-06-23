@@ -28,7 +28,7 @@ public class UserRestController {
      * @param snils
      * @return userSoapService.getUser(snils);
      */
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @GetMapping("/userRest")
     public ResponseEntity<UserDto> getUser(@RequestParam(value = "snils")String snils) {
         return userSoapService.getUser(snils);
     }

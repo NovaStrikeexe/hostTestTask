@@ -18,11 +18,10 @@ import ru.hostco.reguser.types.ObjectFactory;
 @RequestMapping("/user")
 @RequiredArgsConstructor
 @Data
-
 public class UserSoapController extends WebServiceGatewaySupport {
 
     final private String soapToken = "D468E929-A94E-4F16-A7D2-DB414EC53071";
-    final private String soapUrl = "https://cas-test.hostco.ru/RegUserService/services/RegUserService";
+    final private String soapUrl = "http://localhost:8088";
     final private String getUser = "/user";
     public GetUserResponseType getUser(String snils) {
         ObjectFactory objectFactory = new ObjectFactory();

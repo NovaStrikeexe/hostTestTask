@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
         jaxb:extensionBindingPrefixes="xjc annox"
         version="2.1"
-        xmlns:annox="http://java.sun.com/xml/ns/jaxb/xjc">
+        xmlns:annox="http://annox.dev.java.net">
   <jaxb:globalBindings>
     <xjc:javaType adapter="ru.host.hostTestTask.AdaptersXmlDate.AdapterXmlDate"
                   name="java.time.LocalDate"
