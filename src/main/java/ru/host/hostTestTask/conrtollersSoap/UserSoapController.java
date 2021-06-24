@@ -12,7 +12,7 @@ import ru.hostco.reguser.types.GetUserResponseType;
 import ru.hostco.reguser.types.ObjectFactory;
 
 /**
- *
+ * SOAP Контроллер для работы с запросами поиска "/user" по парамеру "snils"
  */
 @Controller("UserController")
 @RequestMapping("/user")

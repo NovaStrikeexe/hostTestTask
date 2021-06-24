@@ -6,13 +6,16 @@ HostTestTask - Тестовое задание для стажеровки в Г
 
 Необходимое для запуска приложения:
 -----------
-1 IDE (Intelj idea, Eclipse, VSCODE)
+1 IDE (intellij idea, Eclipse, VSCODE)
 
 2 postgresql
 
 3 JDK V1.8
 
-4 ОПЦИОНАЛЬНО наличие прописанных Path Variable (JAVA_HOME,MAVEN_HOME)
+4 Плагин для работы с аннотациями Lombok(для вашей IDE)
+
+5 ОПЦИОНАЛЬНО наличие прописанных Path Variable (JAVA_HOME,MAVEN_HOME)
+
 
 Первый запуск:
 -----------

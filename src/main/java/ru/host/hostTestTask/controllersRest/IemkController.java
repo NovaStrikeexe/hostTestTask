@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.host.hostTestTask.dto.PatientListDto;
 import ru.host.hostTestTask.serviceRest.IemkRestService;
 
+/**
+ * IemkController - Класс отвечающий за запрос поиска пациента по параметрам "snils" и"lastName"
+ */
 @RestController
 @EnableAutoConfiguration
 public class IemkController{

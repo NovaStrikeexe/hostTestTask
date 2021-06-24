@@ -8,7 +8,9 @@ import ru.host.hostTestTask.clientsRest.IemkRestClient;
 import ru.host.hostTestTask.dto.PatientListDto;
 import ru.host.hostTestTask.exceptions.ResponseException;
 
-
+/**
+ * IemkRestServiceImpl - класс для расширения сервиса IemkRestService
+ */
 public class IemkRestServiceImpl implements IemkRestService{
     private IemkRestClient iemkRestClient;
     @Autowired

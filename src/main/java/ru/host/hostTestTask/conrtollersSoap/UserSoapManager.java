@@ -7,7 +7,7 @@ import ru.host.hostTestTask.exceptions.SoapEventException;
 import ru.hostco.reguser.types.GetUserResponseType;
 
 /**
- *
+ * UserSoapManager - Класс обработчик результат запроса
  */
 @Component
 public class UserSoapManager {

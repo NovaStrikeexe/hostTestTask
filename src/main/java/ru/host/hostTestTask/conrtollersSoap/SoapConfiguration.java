@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
 /**
- *
+ * Конфигурационный класс для работы с SOAP запросами
  */
 @Configuration
 public class SoapConfiguration {

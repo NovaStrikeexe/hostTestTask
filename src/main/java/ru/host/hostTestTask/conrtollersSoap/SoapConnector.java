@@ -2,6 +2,9 @@ package ru.host.hostTestTask.conrtollersSoap;
 
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
+/**
+ * SoapConnector - Класс необходимый для маршализации отправки и получения
+ */
 public class SoapConnector extends WebServiceGatewaySupport {
 
     /**

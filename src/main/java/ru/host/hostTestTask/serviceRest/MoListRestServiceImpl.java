@@ -9,6 +9,9 @@ import ru.host.hostTestTask.dto.MoListDto;
 import ru.host.hostTestTask.exceptions.ResponseException;
 import ru.host.hostTestTask.repository.MoListRepository;
 
+/**
+ * MoListRestServiceImpl - класс для расширения сервиса MoListRestService
+ */
 public class MoListRestServiceImpl implements MoListRestService {
     private final MoListRepository moListRepository;
 

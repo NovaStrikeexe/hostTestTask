@@ -13,6 +13,9 @@ import ru.hostco.reguser.types.GetUserResponseType;
 
 import javax.transaction.Transactional;
 
+/**
+ * UserSoapServiceImpl - класс для расширения сервиса UserSoapService
+ */
 @Service
 public class UserSoapServiceImpl implements UserSoapService {
     private final SoapConnector soapConnector;

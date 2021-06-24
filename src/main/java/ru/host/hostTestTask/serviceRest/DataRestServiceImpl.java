@@ -9,6 +9,9 @@ import ru.host.hostTestTask.repository.DataRepository;
 
 import java.util.Objects;
 
+/**
+ * DataRestServiceImpl - класс для расширения сервиса DataRestService
+ */
 @Service
 @Data
 public class DataRestServiceImpl implements DataRestService {

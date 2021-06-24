@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.host.hostTestTask.entities.SaveData;
 import ru.host.hostTestTask.serviceRest.DataRestService;
 
+/**
+ * DataController - Класс для сохранения данных пользователя
+ */
 @RestController
 public class DataController  {
     private final DataRestService dataRestService;

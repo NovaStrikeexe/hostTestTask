@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import ru.host.hostTestTask.entities.SaveData;
 
 /**
- * Репозиторий для работы с запросами по сохраниению данных в базе
+ * Репозиторий для работы с запросами по сохраниению данных типа "user"
  */
 @Repository
 public interface DataRepository extends JpaRepository<SaveData, Long> {

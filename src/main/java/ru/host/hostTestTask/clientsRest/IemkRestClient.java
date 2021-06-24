@@ -6,6 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import ru.host.hostTestTask.dto.PatientListDto;
 
+/**
+ * IemkRestClient - клиент для запросов /iemk
+ * Три ревеста для выполнения поиска при условиях:
+ * Наличие СНИЛС и Фамилии
+ * Наличие СНИЛС (Фамилия не указана)
+ * Наличие Фамилии (CНИЛС не указан)
+ */
 @FeignClient(value = "IemkRestClient", url = "${app.REST.RestURL}")
 public interface IemkRestClient {
     @RequestMapping(method = RequestMethod.GET,

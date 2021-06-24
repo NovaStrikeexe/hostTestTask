@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.host.hostTestTask.dto.UserDto;
 
+/**
+ * UserSoapService - Сервис для поиска данных (Оснавная логика UserRestController )
+ */
 @Service
 public interface UserSoapService {
     @RequestMapping(value = "/user", method = RequestMethod.GET)

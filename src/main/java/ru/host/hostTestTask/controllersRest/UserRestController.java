@@ -7,7 +7,7 @@ import ru.host.hostTestTask.dto.UserDto;
 import ru.host.hostTestTask.serviceSoap.UserSoapService;
 
 /**
- * RestController отвечает обработку запроса по пользователю
+ * RestController - Класс отвечает обработку запроса по пользователю
  */
 @RestController
 public class UserRestController {
