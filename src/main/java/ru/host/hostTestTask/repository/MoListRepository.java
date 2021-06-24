@@ -11,5 +11,5 @@ import java.util.List;
  */
 @Repository
 public interface MoListRepository extends JpaRepository<Mo, Long> {
-    List<Mo> findByIsShownTrue();
+    List<Mo> findByIsShownTrue(Boolean isShown);
 }
